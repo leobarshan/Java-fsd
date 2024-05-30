@@ -1,0 +1,5 @@
+<div>
+  <h2>Parent Component</h2>
+  <p>Data from Child: {{ parentData }}</p>
+  <app-child [childData]="parentData" (childDataChange)="handleChildDataChange($event)"></app-child>
+</div>

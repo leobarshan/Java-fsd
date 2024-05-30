@@ -1,0 +1,25 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username" />
+    <div *ngIf="signupForm.get('username')!.errors?.['required']">Username is required.</div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" />
+    <div *ngIf="signupForm.get('email')!.errors?.['required']">Email is required.</div>
+    <div *ngIf="signupForm.get('email')!.errors?.['email']">Invalid email format.</div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" />
+    <div *ngIf="signupForm.get('password')!.errors?.['required']">Password is required.</div>
+    <div *ngIf="signupForm.get('password')!.errors?.['minlength']">Password must be at least 6 characters long.</div>
+  </div>
+
+  <!-- Add more form inputs and validation messages as needed -->
+
+  <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+</form>
