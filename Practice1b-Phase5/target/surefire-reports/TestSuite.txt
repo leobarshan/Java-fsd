@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 3.513 s <<< FAILURE! - in TestSuite
+com.example.ParallelTest.setup  Time elapsed: 2.612 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in F:\Mphasis\Phase05\SeleniumTestApp2\src\test\resources\testng.xml
+
